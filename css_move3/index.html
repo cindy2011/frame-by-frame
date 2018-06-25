@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+  <meta name="format-detection" content="telephone=no">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta charset="utf-8">
+  <title>JS Bin</title>
+</head>
+<style>
+   @keyframes run {
+     0% {
+       background-position: 0 0;
+     }
+     100% {
+       background-position: -6000px 0;
+     }
+   }
+  @-webkit-keyframes run {
+    0% {
+      background-position: 0 0;
+    }
+    100% {
+      background-position: -6000px 0;
+    }
+  }
+  #sprite {
+    width: 75px;
+    height: 90px;
+    background: url("http://www.hacke2.cn/images/article/demo/1-slow.png") 0 0 no-repeat;
+    -webkit-animation: run 1s steps(80) infinite;/*80帧*/
+    animation: run 1s steps(80) infinite;
+  }
+</style>
+<body>
+<div id="sprite"></div>
+</body>
+</html>

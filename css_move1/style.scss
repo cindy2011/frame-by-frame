@@ -1,0 +1,39 @@
+$spriteWidth: 140px; // 精灵宽度 
+@keyframes run {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: -($spriteWidth * 12) 0; // 12帧
+    }
+}
+body{
+  position: relative;
+  margin:0;
+  padding:0;
+}
+#sprite {
+  position: absolute;
+  top:0;
+  left:0;
+    width: $spriteWidth;
+    height: 144px;
+    background: url("./player.png") 0 0 no-repeat;
+    animation: run 0.6s steps(12) infinite;
+    -webkit-transform-origin: 0 0; 
+    -moz-transform-origin: 0 0; 
+    -o-transform-origin: 0 0; 
+    -ms-transform-origin: 0 0; 
+    transform-origin: 0 0;
+
+
+    transform: scale(0.5);
+    -ms-transform: scale(0.5,0.5);
+    /* IE 9 */
+    -moz-transform: scale(0.5,0.5);
+    /* Firefox */
+    -webkit-transform: scale(0.5,0.5);
+    /* Safari 和 Chrome */
+    -o-transform: scale(0.5,0.5);
+    /* Opera */
+}
